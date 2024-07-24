@@ -212,7 +212,7 @@ router.get(
             $or: [
               { source: locationId },
               { destination: locationId },
-              { createdBy: userId },
+              { createdBy: mongoose.Types.ObjectId(userId) },
             ],
           },
         },
@@ -266,7 +266,7 @@ router.get(
 
       return res.status(200).json({
         summary: {
-          message: `Shipment  retrieved successfully`,
+          message: `Shipment retrieved successfully`,
         },
         shipment: shipment[0],
       });
