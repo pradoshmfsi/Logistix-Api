@@ -1,12 +1,12 @@
 const express = require("express");
 const { dbConn } = require("./config/db");
-// const productRoutes = require('./routes/products');
+require("dotenv").config();
 const userRoutes = require("./routes/user");
 const shipmentRoutes = require("./routes/shipment");
 
 const cors = require("cors");
 const app = express();
-const port = 4001;
+const port = process.env.PORT || 4001;
 app.use(express.json());
 app.use(cors());
 
