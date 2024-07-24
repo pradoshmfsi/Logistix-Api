@@ -50,7 +50,7 @@ router.post("/shipments/userId=:userId", Auth, async (req, res) => {
       $or: [
         { source: locationId },
         { destination: locationId },
-        { createdBy: userId },
+        { createdBy: mongoose.Types.ObjectId(userId) },
       ],
     };
 
