@@ -8,5 +8,16 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.4.4",
     "nodemon": "^3.1.4"
-  }
+  },
+  "name": "logistix-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "npx nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
